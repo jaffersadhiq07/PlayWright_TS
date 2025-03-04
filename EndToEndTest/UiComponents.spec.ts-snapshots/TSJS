@@ -1,0 +1,25 @@
+
+
+public class LoginTest {
+    public static void main(String[] args) {
+
+        WebDriver driver = new ChromeDriver();
+        
+            driver.get("https://example.com/login");
+            driver.findElement(By.id("username")).sendKeys("your_username");
+            driver.findElement(By.id("password")).sendKeys("your_password");
+            driver.findElement(By.id("loginButton")).click();
+    }
+}
+
+
+
+
+
+
+test('Login Test', async ({ page }) => {
+   await page.goto('https://example.com/login');  
+ await   page.locator('#username').fill('user');  
+  await  page.locator('#password').fill('password');  
+   await page.locator('button[type="submit"]').click();  
+});
