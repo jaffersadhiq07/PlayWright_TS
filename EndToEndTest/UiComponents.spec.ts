@@ -140,6 +140,8 @@ test.skip('Working with screentshot', async({page})=>{
 })
 })
 
+
+
 test.only('Uploading a file', async({page})=>{
     await page.goto("https://testautomationpractice.blogspot.com/")
     const File = await page.locator("//input[@id='singleFileInput']")
