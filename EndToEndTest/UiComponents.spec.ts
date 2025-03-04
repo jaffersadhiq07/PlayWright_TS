@@ -78,7 +78,7 @@ test.skip('Drop Down', async({page})=>{
 
 })
 
-test.skip('Alerts & popup', async({page})=>{
+test.only('Alerts & popup', async({page})=>{
 
   await page.goto("https://testautomationpractice.blogspot.com/")
   await page.waitForTimeout(3000);
@@ -91,6 +91,7 @@ test.skip('Alerts & popup', async({page})=>{
   await expect(dialog.defaultValue()).toContain('Harry Potter')
   await page.waitForTimeout(3000);
   await (dialog.accept('Playwright Automation'));
+  console.log("Dialog box Accepted")
 
   })
 
@@ -142,12 +143,13 @@ test.skip('Working with screentshot', async({page})=>{
 
 
 
-test.only('Uploading a file', async({page})=>{
+test.skip('Uploading a file', async({page})=>{
     await page.goto("https://testautomationpractice.blogspot.com/")
     const File = await page.locator("//input[@id='singleFileInput']")
     await File.click();
     await File.setInputFiles('EndToEndTest/Document_Page.txt')
     await page.waitForTimeout(10000)
+    
 })
 
 
