@@ -16,7 +16,7 @@ public class LoginTest {
 
 
 
-
+//this for logi
 test('Login Test', async ({ page }) => {
    await page.goto('https://example.com/login');  
  await   page.locator('#username').fill('user');  
